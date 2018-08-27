@@ -147,6 +147,8 @@ html, body {
 }
 .main .main-right .form-send .form-button-send:hover {
     cursor: pointer;
+    transition: 0.5s linear;
+    color:white;
 }
 .main .main-right h4 {
     font-weight: 300;
@@ -235,6 +237,7 @@ html, body {
     transition-duration: 2s;
 }
 .footer button:hover {
+    transition: 1s linear;
     background-image: linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
     cursor: pointer;
 }
@@ -265,6 +268,9 @@ html, body {
         flex-direction: column;
         align-items: center;
     }
+    .main .main-right h4 {
+        padding: 1px 30px 10px 30px;
+    }
 }
 
 @media only screen and (max-width: 968px) {
@@ -278,28 +284,33 @@ html, body {
         margin-bottom: 10px;
     }
     .main .main-left span {
-        font-size: 82px;
+        font-size: 42px;
     }
     .main .main-left p {
         width: 100%;
         padding-left: 0px;
+        font-size: 28px;
     }
     .main .main-left .main-information span {
-        font-size: 36px;
+        font-size: 26px;
     }
     .main .main-left .main-information {
-        font-size: 30px;
+        font-size: 25px;
         margin-left: 0px;
     }
     .main .main-right {
         width: 80%;
         margin-right: 0px;
+        padding-top: 35px;
+    }
+    .main .main-right h4 {
+        padding: 1px 30px 15px 30px;
     }
     .main .main-right p {
-        font-size: 25px;
+        font-size: 22px;
     }
     .main .main-right span {
-        font-size: 19px;
+        font-size: 16px;
     }
     .information .information-body .column {
         width: 100%;
@@ -308,28 +319,89 @@ html, body {
     .information .information-body .column h3 {
         font-size: 18px;
     }
+    .information h2 {
+        padding: 25px 0px 15px 0px;
+    }
+    .main .main-left p {
+        margin: 8px 0px 8px 0px;
+    }
+    .footer button {
+        height: 80px;
+        font-size: 30px;
+    }
+    .footer .container-input-icon img {
+        width: 16px;
+        top: 28px;
+        right: 32px;
+    }
+    .footer h3 {
+        padding-top: 35px;
+    }
+    .footer-bg {
+        padding-bottom: 35px;
+    }
 }
 
 @media only screen and (max-width: 805px) {
     .main .main-left span {
-        font-size: 68px;
+        font-size: 32px;
+    }
+    .main .main-left p {
+        font-size: 26px;
     }
     .footer-info {
-        font-size: 23px;
+        font-size: 16px;
+    }
+    .main .main-right h4 {
+        padding: 1px 30px 5px 30px;
+    }
+    .information h2 {
+        font-size: 24px;
+        padding: 20px 0px 7px 0px;
+    }
+    .footer h3 {
+        padding-top: 20px;
+        font-size: 24px;
+    }
+    .footer button {
+        margin-top: 3px;
+        height: 62px;
+        font-size: 24px;
+    }
+    .footer .container-input-icon img {
+        right: 19px;
+        top: 21px;
+        width: 14px;
+    }
+    .footer-bg {
+        padding-bottom: 35px;
     }
 }
 
 @media only screen and (max-width: 669px) {
     .main .main-left span {
-        font-size: 60px;
+        font-size: 25px;
+    }
+    .main .main-left p {
+        font-size: 22px;
+        margin: 5px 0px 5px 0px;
     }
     .main .main-left .main-information {
         font-size: 18px;
     }
+    .main .main-right {
+        padding-top: 25px;
+    }
+    .main .main-right .logo {
+        width: 170px;
+    }
 }
 @media only screen and (max-width: 650px) {
     .main .main-left .main-information span{
-        font-size: 32px;
+        font-size: 25px;
+    }
+    .main .main-right .form-send .form-button-send {
+        font-size: 20px;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -350,9 +422,7 @@ html, body {
 @media only screen and (max-width: 500px) {
     .main .main-right{
         width: 100%;
-    }
-    .main .main-left span {
-        font-size: 50px;
+        padding-top: 25px;
     }
     .main .main-left .main-information span {
         font-size: 23px;
@@ -364,22 +434,53 @@ html, body {
         font-size: 14px;
     }
     .main .main-left p {
-        font-size: 23px;
+        font-size: 16px;
+        margin: 5px 0px 3px 0px;
     }
     .footer-info {
         font-size: 16px;
     }
+    .main .main-right h4 {
+        padding: 1px 30px 5px 30px;
+    }
+    .main .main-right .logo {
+        width: 150px;
+    }
+    .main .main-left .main-information .img-info {
+        height: 250px;
+    }
+    .main .main-left span {
+        font-size: 20px;
+    }
+    .main .main-left .main-information .img-info {
+        margin-top: 5px;
+    }
+    .information h2 {
+        font-size: 24px;
+        padding: 17px 0px 7px 0px;
+    }
+    .footer button {
+        margin-top: 3px;
+        height: 58px;
+        font-size: 24px;
+    }
+    .footer h3 {
+        padding-top: 20px;
+        font-size: 22px;
+    }
+    .footer .container-input-icon img {
+        right: 19px;
+        top: 18px;
+        width: 13px;
+    }
+    .information .information-body .last-info-section .last-p {
+        margin-bottom: 0px;
+    }
 }
 
 @media only screen and (max-width: 415px) {
-    .main .main-left span {
-        font-size: 41px;
-    }
     .main .main-left .main-information {
         font-size: 15px;
-    }
-    .main .main-left p {
-        font-size: 20px;
     }
     .main .main-left .main-information span {
         font-size: 20px;
@@ -395,10 +496,10 @@ html, body {
         font-size: 15px;
     }
     .main .main-right h4 {
-        font-size: 13px;
+        font-size: 16px;
     }
-    .footer h3 {
-        font-size: 26px;
+    .footer-bg {
+        padding-bottom: 20px;
     }
 }
 
@@ -414,14 +515,6 @@ html, body {
     }
     .main .main-right .form-send .form-button-send {
         width: 99%;
-    }
-    .footer .container-input-icon img {
-        right: 12px;
-        top: 37px;
-        width: 15px;
-    }
-    .footer button {
-        font-size: 30px;
     }
     .main .main-right .form-send .input-tel{
         width: 96%;
@@ -442,17 +535,25 @@ html, body {
     .main .main-right p {
         font-size: 14px;
     }
+    .main .main-left {
+        padding-top: 24px;
+    }
     .main .main-left span {
-        font-size: 35px;
+        font-size: 18px;
     }
     .main .main-left p {
-        font-size: 18px;
+        margin: 5px 0px 3px 0px;
+        font-size: 14px;
     }
     .main .main-left .main-information {
         font-size: 14px;
     }
-    .footer h3 {
-        font-size: 22px;
+    .main .main-left .main-information .img-info {
+        margin-top: 2px;
+        height: 187px;
+    }
+    .main .main-right {
+        padding-top: 20px;
     }
     .main .main-right .form-send .input-tel{
         padding-left: 4px;
@@ -460,6 +561,78 @@ html, body {
     }
     .main .main-right .form-send select {
         width: 98%;
+    }
+    .main .main-right .logo {
+        width: 110px;
+    }
+    .main .main-right p {
+        padding: 0px 10px;
+        margin: 5px 0px 2px 0px;
+        font-weight: 500;
+        line-height: 1.5em;
+    }
+    .main .main-right span {
+        letter-spacing: 0.1em;
+    }
+    .main .main-right .form-send {
+        margin: 20px auto;
+    }
+    .main .main-right .form-send input, .main .main-right .form-send select {
+        margin-bottom: 15px;
+        height: 49px;
+    }
+    .main .main-right .form-send .input-tel .tel-code {
+        width: 29%;
+    }
+    .main .main-right .form-send .form-button-send {
+        margin-top: 4px;
+    }
+    .main .main-right h4 {
+        font-size: 16px;
+        line-height: 1.5;
+        padding-bottom: 0px;
+        margin: -11px 0px 12px 0px;
+    }
+    .information h2 {
+        font-size: 22px;
+        padding: 17px 0px 7px 0px;
+    }
+    .information .information-body .column h3,
+    .information .information-body .column {
+        font-size: 16px;
+    }
+    .information .information-body .column p {
+        margin: 0px 0px 58px 0px;
+    }
+    .information-bg {
+        padding-bottom: 0px;
+    }
+    .information .information-body .last-info-section .first-p {
+        margin-bottom: 0px;
+    }
+    .information .information-body .last-info-section .last-p {
+        margin-bottom: 54px;
+    }
+    .footer h3 {
+        padding-top: 20px;
+        font-size: 22px;
+    }
+    .footer button {
+        margin-top: 3px;
+        height: 58px;
+        font-size: 24px;
+    }
+    .footer .container-input-icon img {
+        right: 19px;
+        top: 16px;
+        width: 14px;
+    }
+    .footer-bg {
+        padding-bottom: 28px;
+    }
+    .footer-info {
+        font-size: 14px;
+        padding: 25px 0px 1px 0px;
     }
 }
 @media only screen and (max-width: 310px) {
