@@ -4,6 +4,45 @@ var lastName = document.getElementById('lastname');
 var email = document.getElementById('email');
 var country = document.getElementById('country');
 var telephone = document.getElementById('telephone');
+var countryCode = document.getElementById('country_code');
+
+var countryObj = [
+    {
+        name: "Ukraine",
+        code: "+380"
+    }, {
+        name: "Romania",
+        code: "+40000"
+    }, {
+        name: "Russia",
+        code: "+7346"
+    }, {
+        name: "France",
+        code: "+7366"
+    }, {
+        name: "Italy",
+        code: "+3938"
+    }
+];
+
+function setOptionCountry () {
+    for (i=0; i < countryObj.length; i++) {
+        country.options[country.options.length] = new Option(countryObj[i].name, countryObj[i].name);
+    }
+
+    if (localStorage.length > 0) {
+        country.selectedIndex = localStorage.getItem('selectedCountryIndex');
+        countryCode.value = countryObj[country.selectedIndex-1].code;
+    }
+};
+setOptionCountry();
+
+function setCountry () {
+    var selectedCountry = countryObj[country.selectedIndex-1];
+
+    localStorage.setItem('selectedCountryIndex', country.selectedIndex);
+    countryCode.value = selectedCountry.code;
+};
 
 send.addEventListener("click", function () {
     var status = true;
@@ -36,10 +75,12 @@ send.addEventListener("click", function () {
         status = false;
     }
 
-    if (/[0-9]{7,}/.test(telephone.value)) {
+    if (/[0-9]{7,}/.test(countryCode.value + telephone.value)) {
         telephone.style.border = "none";
+        document.getElementById('country_code').style.border = "none";
     } else {
         telephone.style.border = "2px solid red";
+        document.getElementById('country_code').style.border = "2px solid red";
         status = false;
     }
 
@@ -52,5 +93,5 @@ send.addEventListener("click", function () {
 
 function show () {
     alert("First name : " + firstName.value + ";  Last Name : " +
-        lastName.value + "; Email : " + email.value + "; Country : " + country.value + "; Number telephone : " + telephone.value + " ;" );
-}
+        lastName.value + "; Email : " + email.value + "; Country : " + country.value + "; Number telephone : " + countryCode.value + telephone.value + " ;" );
+};
