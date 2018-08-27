@@ -75,7 +75,7 @@ send.addEventListener("click", function () {
         status = false;
     }
 
-    if (/[0-9]{7,}/.test(countryCode.value + telephone.value)) {
+    if (/[0-9]{7,19}/.test(countryCode.value + telephone.value)) {
         telephone.style.border = "none";
         document.getElementById('country_code').style.border = "none";
     } else {

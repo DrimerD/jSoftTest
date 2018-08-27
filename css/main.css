@@ -392,7 +392,7 @@ html, body {
     }
     .main .main-right .form-send .form-button-send {
         width: 100%;
-        font-size: 20px;
+        font-size: 15px;
     }
     .main .main-right h4 {
         font-size: 13px;
@@ -413,7 +413,7 @@ html, body {
         width: 95%;
     }
     .main .main-right .form-send .form-button-send {
-        width: 95%;
+        width: 99%;
     }
     .footer .container-input-icon img {
         right: 12px;
