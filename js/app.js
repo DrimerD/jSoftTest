@@ -48,39 +48,38 @@ send.addEventListener("click", function () {
     var status = true;
 
     if (/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/.test(email.value)) {
-        email.style.border = "none";
+        email.style.borderBottom  = "none";
     } else {
-        email.style.border = "2px solid red";
+        email.style.borderBottom  = "2px solid red";
         status = false;
     }
 
-    if (/[A-Za-z]{3,}/.test(firstName.value)) {
-        firstName.style.border = "none";
+    if (/^([a-z\s]){3,15}$/.test(firstName.value)) {
+        firstName.style.borderBottom  = "none";
     } else {
-        firstName.style.border = "2px solid red";
+        firstName.style.borderBottom  = "2px solid red";
         status = false;
     }
 
-    if (/[A-Za-z]{3,}/.test(lastName.value)) {
-        lastName.style.border = "none";
+    if (/^([a-z\s]){3,15}$/.test(lastName.value)) {
+        lastName.style.borderBottom  = "none";
     } else {
-        lastName.style.border = "2px solid red";
+        lastName.style.borderBottom  = "2px solid red";
         status = false;
     }
 
-    if (/[A-Za-z]{3,}/.test(country.value)) {
-        country.style.border = "none";
+    if (country.value) {
+        country.style.borderBottom = "none";
     } else {
-        country.style.border = "2px solid red";
-        status = false;
+        country.style.borderBottom = "2px solid red";
     }
 
-    if (/[0-9]{7,11}/.test(countryCode.value + telephone.value)) {
-        telephone.style.border = "none";
-        document.getElementById('country_code').style.border = "none";
+    if (/^([0-9]){3,8}$/.test(telephone.value)) {
+        telephone.style.borderBottom  = "none";
+        document.getElementById('country_code').style.borderBottom  = "none";
     } else {
-        telephone.style.border = "2px solid red";
-        document.getElementById('country_code').style.border = "2px solid red";
+        telephone.style.borderBottom  = "2px solid red";
+        document.getElementById('country_code').style.borderBottom  = "2px solid red";
         status = false;
     }
 
